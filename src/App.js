@@ -1,25 +1,64 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from 'react'
+import { useNames } from './hooks'
 
-function App() {
+// Themeor is only used for fast styling
+// You don't need to install it
+import { Gap } from 'themeor'
+import {AppStyles, Button, Title, Value, Input} from './styles'
+
+export default function App() {
+  const {
+    firstName,
+    setFirstName,
+    lastName,
+    setLastName,
+    fullName,
+    punName,
+    makePunName,
+  } = useNames()
+
+  useEffect(() => {
+    setFirstName('Boris')
+    setLastName('Britva')
+  }, [])
+
+  function handleFirstNameChange(e) {
+    setFirstName(e.target.value)
+  }
+
+  function handlelastNameChange(e) {
+    setLastName(e.target.value)
+  }
+
+  function handleClick() {
+    makePunName()
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <AppStyles>
 
-export default App;
+      <Title>Storage of your name</Title>
+      <Value name="First Name">{firstName}</Value>
+      <Value name="Last Name">{lastName}</Value>
+      <Value name="Full Name">{fullName}</Value>
+      {punName && <Value name="AKA">{punName}</Value>}
+
+      <Gap />
+
+      <Input
+        label="Enter your first name"
+        onChange={handleFirstNameChange}
+      />
+
+      <Input
+        label="Enter your fathers name"
+        onChange={handlelastNameChange}
+      />
+
+      <Button onClick={handleClick}>
+        Make a pun name
+      </Button>
+
+    </AppStyles>
+  )
+}
