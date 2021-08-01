@@ -1,6 +1,6 @@
 # Master Hook Playground
 
- That is a representation of how you can yose `master-hook` package
+ That is a representation of how you can yose [master-hook](https://github.com/opium-pro/master-hook) package
 
 for the begining:
  ```
