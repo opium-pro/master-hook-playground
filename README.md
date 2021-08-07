@@ -4,6 +4,8 @@
 
 for the begining:
  ```
+ git clone https://github.com/opium-pro/master-hook-playground.git
+ cd master-hook-playground
  npm i
  npm start
  ```

@@ -3,7 +3,7 @@ import { useNames } from './hooks'
 
 // Themeor is only used for fast styling
 // You don't need to install it
-import { Gap } from 'themeor'
+import { Gap, Line } from 'themeor'
 import {AppStyles, Button, Title, Value, Input} from './styles'
 
 export default function App() {
@@ -15,10 +15,12 @@ export default function App() {
     fullName,
     punName,
     makePunName,
+    makePunNameWithDelay,
+    isLoading,
   } = useNames()
 
   useEffect(() => {
-    setFirstName('Boris')
+    // setFirstName('Boris')
     setLastName('Britva')
   }, [])
 
@@ -34,6 +36,10 @@ export default function App() {
     makePunName()
   }
 
+  function handleClickWithDelay() {
+    makePunNameWithDelay()
+  }
+
   return (
     <AppStyles>
 
@@ -42,6 +48,10 @@ export default function App() {
       <Value name="Last Name">{lastName}</Value>
       <Value name="Full Name">{fullName}</Value>
       {punName && <Value name="AKA">{punName}</Value>}
+
+      <Line />
+
+      <Value name="Is Loading">{isLoading?.toString()}</Value>
 
       <Gap />
 
@@ -57,6 +67,10 @@ export default function App() {
 
       <Button onClick={handleClick}>
         Make a pun name
+      </Button>
+
+      <Button onClick={handleClickWithDelay}>
+        Make a pun name with delay
       </Button>
 
     </AppStyles>

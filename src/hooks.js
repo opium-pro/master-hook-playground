@@ -1,10 +1,14 @@
 import MasterHook from 'master-hook'
-import { makePunName } from './actions'
-import { fullName } from './selectors'
+import * as actions from './actions'
+import * as selectors from './selectors'
 
 export const useNames = MasterHook({
   initialState: { firstName: undefined, lastName: undefined, punName: undefined },
   storage: 'names',
-  actions: { makePunName },
-  selectors: { fullName },
+  actions,
+  selectors,
+  cache: {
+    firstName: 0,
+    lastName: 0,
+  }
 })
