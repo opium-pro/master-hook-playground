@@ -1,11 +1,12 @@
 # Master Hook Playground
 
- That is a representation of how you can yose [master-hook](https://github.com/opium-pro/master-hook) package
+ That is a representation of how you can use [master-hook](https://github.com/opium-pro/master-hook) package
 
 for the begining:
  ```
  git clone https://github.com/opium-pro/master-hook-playground.git
  cd master-hook-playground
+ 
  npm i
  npm start
  ```
