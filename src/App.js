@@ -36,6 +36,10 @@ export default function App() {
     makePunNameWithDelay()
   }
 
+  function handleForcedClickWithDelay() {
+    force(makePunNameWithDelay())
+  }
+
   return (
     <AppStyles>
 
@@ -69,7 +73,7 @@ export default function App() {
         Make a pun name with delay
       </Button>
 
-      <Button onClick={() => force(makePunNameWithDelay())}>
+      <Button onClick={handleForcedClickWithDelay}>
         Force pun name with delay
       </Button>
 
