@@ -20,11 +20,6 @@ export default function App() {
     isPending,
   } = useNames()
 
-  useEffect(() => {
-    // setFirstName('Boris')
-    setLastName('Britva')
-  }, [])
-
   function handleFirstNameChange(e) {
     setFirstName(e.target.value)
   }
