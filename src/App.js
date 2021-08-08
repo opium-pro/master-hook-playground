@@ -51,7 +51,7 @@ export default function App() {
 
       <Line />
 
-      <Value name="Is Loading">{isPending?.toString()}</Value>
+      <Value name="Is Pending">{isPending?.toString()}</Value>
 
       <Gap />
 
