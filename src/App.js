@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { useNames } from './hooks'
 
 // Themeor is only used for fast styling
