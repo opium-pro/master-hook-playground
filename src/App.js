@@ -69,7 +69,8 @@ export default function App() {
       </Button>
 
       <Button onClick={handleClickWithDelay}>
-        Make a pun name with delay
+        Make a pun name with delay<br />
+        Alowed once per 10 sec
       </Button>
 
       <Button onClick={handleForcedClickWithDelay}>
