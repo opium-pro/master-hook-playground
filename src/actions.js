@@ -1,8 +1,12 @@
 import { useStorage, createAction } from 'master-hook'
+import { random } from './utils/random'
+import { adverbs, adjectives, nouns } from './utils/words'
+
 
 export const makePunName = createAction(async () => {
-  const { setPunName, firstName } = useStorage('names')
-  const punName = firstName + ' Shm' + firstName?.slice(1)
+  const { setPunName } = useStorage('names')
+  console.log(random(0, adverbs.length-1));
+  const punName = `${adverbs[random(0, adverbs.length-1)]} ${adjectives[random(0, adjectives.length-1)]} ${nouns[random(0, nouns.length-1)]}`
   setPunName(punName)
 })
 
@@ -14,4 +18,4 @@ export const makePunNameWithDelay = createAction(() => {
       res()
     }, 2000)
   })
-}, ['names'])
+}, 10000, 'names')

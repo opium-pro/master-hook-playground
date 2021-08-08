@@ -5,6 +5,7 @@ import { useNames } from './hooks'
 // You don't need to install it
 import { Gap, Line } from 'themeor'
 import {AppStyles, Button, Title, Value, Input} from './styles'
+import {force} from 'master-hook'
 
 export default function App() {
   const {
@@ -16,7 +17,7 @@ export default function App() {
     punName,
     makePunName,
     makePunNameWithDelay,
-    isLoading,
+    isPending,
   } = useNames()
 
   useEffect(() => {
@@ -51,7 +52,7 @@ export default function App() {
 
       <Line />
 
-      <Value name="Is Loading">{isLoading?.toString()}</Value>
+      <Value name="Is Loading">{isPending?.toString()}</Value>
 
       <Gap />
 
@@ -71,6 +72,10 @@ export default function App() {
 
       <Button onClick={handleClickWithDelay}>
         Make a pun name with delay
+      </Button>
+
+      <Button onClick={() => force(makePunNameWithDelay())}>
+        Force pun name with delay
       </Button>
 
     </AppStyles>
