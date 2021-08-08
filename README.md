@@ -2,7 +2,6 @@
 
  That is an example of how you can use [master-hook](https://github.com/opium-pro/master-hook) package.
 
-for the begining:
  ```bash
 #  Clone this repository
  git clone https://github.com/opium-pro/master-hook-playground.git
