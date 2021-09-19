@@ -2,7 +2,7 @@
   "name": "master-hook-playground",
   "description": "Example of how to use master-hook package",
   "dependencies": {
-    "master-hook": "^1.4.5",
+    "master-hook": "^1.5.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
