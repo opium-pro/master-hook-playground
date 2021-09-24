@@ -28,7 +28,7 @@ export default function App() {
   }
 
   function handleClick() {
-    makePunName()
+    makePunName('El')
   }
 
   function handleClickWithDelay() {
