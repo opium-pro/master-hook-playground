@@ -3,8 +3,8 @@ import { useNames } from './hooks'
 // Themeor is only used for fast styling
 // You don't need to install it
 import { Gap, Line } from 'themeor'
-import {AppStyles, Button, Title, Value, Input} from './styles'
-import {force} from 'master-hook'
+import { AppStyles, Button, Title, Value, Input } from './styles'
+import { force } from 'master-hook'
 
 export default function App() {
   const {
@@ -28,7 +28,7 @@ export default function App() {
   }
 
   function handleClick() {
-    makePunName('El')
+    makePunName()
   }
 
   function handleClickWithDelay() {

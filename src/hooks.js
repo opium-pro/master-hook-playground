@@ -1,4 +1,4 @@
-import MasterHook from 'master-hook'
+import { MasterHook } from 'master-hook'
 import * as actions from './actions'
 import * as selectors from './selectors'
 

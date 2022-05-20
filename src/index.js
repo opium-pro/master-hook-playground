@@ -1,12 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-import MasterHook from 'master-hook'
+import { Provider } from 'master-hook'
 
 
 ReactDOM.render(
-  <MasterHook.Provider>
+  <Provider>
     <App />
-  </MasterHook.Provider>,
+  </Provider>,
   document.getElementById('root')
 )
